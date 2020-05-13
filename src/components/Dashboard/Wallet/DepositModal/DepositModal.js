@@ -55,7 +55,6 @@ const DialogActions = withStyles((theme) => ({
 export default function DepositModal() {
     const [open, setOpen] = useState(false);
     const [submit, setSubmit] = useState(false);
-    const [status, setStatus] = useState('');
 
     const handleClickOpen = () => {
         setOpen(true);

@@ -81,7 +81,7 @@ function SignIn(props) {
                         component={Link}
                         to="/merchant_payment_v2/register"
                         className={classes.submit}>
-                        Register
+                        Registerrr
           			</Button>
                 </form>
             </Paper>
