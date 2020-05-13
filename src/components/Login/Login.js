@@ -39,7 +39,7 @@ const styles = theme => ({
 
 
 
-function SignIn(props) {
+function Login(props) {
     const { classes } = props
 
     const [email, setEmail] = useState('')
@@ -98,4 +98,4 @@ function SignIn(props) {
     }
 }
 
-export default withRouter(withStyles(styles)(SignIn))
+export default withRouter(withStyles(styles)(Login))

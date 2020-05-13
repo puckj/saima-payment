@@ -84,9 +84,6 @@ const styles = theme => ({
 function Dashboard(props) {
     const { classes } = props
     const [value, setValue] = useState(0);
-    const [tel, setTel] = useState('')
-    const [bank, setBank] = useState('')
-    const [accountNum, setAccountNum] = useState('')
 
     // useEffect(() => {
     //     firebase.getCurrentUserTel().then(setTel)
