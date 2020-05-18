@@ -1,0 +1,9 @@
+.method{
+    text-align: center;
+}
+
+.methodBtn{
+    width: 60%;
+    /* width: 200px; */
+    margin: 5px 0 !important; 
+}

@@ -4,16 +4,19 @@ import { Typography, AppBar, Tabs, Tab, Box } from '@material-ui/core'
 import { ShoppingBasket } from '@material-ui/icons'
 import PersonPinIcon from '@material-ui/icons/PersonPin'
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
+import AirportShuttleIcon from '@material-ui/icons/AirportShuttle';
 import withStyles from '@material-ui/core/styles/withStyles'
 import firebase from '../../firebase'
 import { withRouter } from 'react-router-dom'
 
 import Profile from './Profile/Profile'
 import Wallet from './Wallet/Wallet'
+import Services from './Services/Services'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
+    
     return (
         <div
             role="tabpanel"
@@ -102,6 +105,7 @@ function Dashboard(props) {
         setValue(newValue);
     };
 
+
     return (
         <div className={classes.root}>
             <AppBar position="fixed" color="default" className={classes.appBar}>
@@ -114,17 +118,21 @@ function Dashboard(props) {
                     aria-label="scrollable force tabs example"
                 >
                     <Tab label="โปรโมชั่น" icon={<ShoppingBasket />} {...a11yProps(0)} />
-                    <Tab label="ข้อมูลส่วนตัว" icon={<PersonPinIcon />} {...a11yProps(1)} />
-                    <Tab label="บัญชี" icon={<AccountBalanceWalletIcon />} {...a11yProps(2)} />
+                    <Tab label="บริการส่งสินค้า" icon={<AirportShuttleIcon />} {...a11yProps(1)} />
+                    <Tab label="ข้อมูลส่วนตัว" icon={<PersonPinIcon />} {...a11yProps(2)} />
+                    <Tab label="บัญชี" icon={<AccountBalanceWalletIcon />} {...a11yProps(3)} />
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
                 โปรโมชั่น
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Profile logout={logoutHandler}/>
+                <Services />
             </TabPanel>
             <TabPanel value={value} index={2}>
+                <Profile logout={logoutHandler}/>
+            </TabPanel>
+            <TabPanel value={value} index={3}>
                 <Wallet />
             </TabPanel>
         </div>

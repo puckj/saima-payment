@@ -83,6 +83,16 @@ function Login(props) {
                         className={classes.submit}>
                         Register
           			</Button>
+                    <Button
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        color="default"
+                        component={Link}
+                        to="/merchant_payment_v2/line"
+                        className={classes.submit}>
+                        Sign-In with Line
+          			</Button>
                 </form>
             </Paper>
         </main>
