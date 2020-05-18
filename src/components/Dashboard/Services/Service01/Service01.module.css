@@ -1,0 +1,17 @@
+.serviceItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.serviceItemBtn{
+    height: 20px;
+}
+
+.serviceSubmitBtn{
+    margin-top: 80px !important;
+}
+
+.serviceInput{
+    margin: 15px 0 !important;
+}

@@ -39,7 +39,7 @@ const styles = theme => ({
 
 
 
-function SignIn(props) {
+function Login(props) {
     const { classes } = props
 
     const [email, setEmail] = useState('')
@@ -83,6 +83,16 @@ function SignIn(props) {
                         className={classes.submit}>
                         Registerrr
           			</Button>
+                    <Button
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        color="default"
+                        component={Link}
+                        to="/merchant_payment_v2/line"
+                        className={classes.submit}>
+                        Sign-In with Line
+          			</Button>
                 </form>
             </Paper>
         </main>
@@ -98,4 +108,4 @@ function SignIn(props) {
     }
 }
 
-export default withRouter(withStyles(styles)(SignIn))
+export default withRouter(withStyles(styles)(Login))
